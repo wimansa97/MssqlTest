@@ -1,4 +1,4 @@
 <?php
-include './connection.php';
-$connection = new connection();
-$conn = $connection->openConnection();
+include './execute.php';
+$connection = new execute();
+$conn = $connection->execute();
