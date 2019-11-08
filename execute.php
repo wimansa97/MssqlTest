@@ -10,13 +10,15 @@ class execute
         $this->con = $this->c->openConnection();
 
         try {
-            $tsql = "SELECT UserName FROM dbo.Users";  
+            $tsql = "SELECT Id_No,UserName FROM dbo.Users";  
             $getuser = sqlsrv_query($this->con, $tsql);  
             if ($getuser == FALSE)  
                 die(FormatErrors(sqlsrv_errors()));  
             $productCount = 0;  
             while($row = sqlsrv_fetch_array($getuser, SQLSRV_FETCH_ASSOC))  
             {  
+                echo($row['Id_No']); 
+                echo('-');
                 echo($row['UserName']);  
                 echo("<br/>");  
                 $productCount++;  
