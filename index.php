@@ -1,4 +1,4 @@
 <?php
 include './execute.php';
 $connection = new execute();
-$conn = $connection->execute();
+$conn = $connection->getUsers();

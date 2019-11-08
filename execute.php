@@ -4,7 +4,7 @@ class execute
 {
     var $con;
     var $c;
-    function execute()
+    function getUsers()
     {
         $this->c = new connection();
         $this->con = $this->c->openConnection();
